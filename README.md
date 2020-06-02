@@ -1,3 +1,3 @@
 ## Http and React
 
-Part of a "React - The Complete Guide" course from Udemy.
+Part of the "React - The Complete Guide" course from Udemy.
