@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
 import Posts from './Posts/Posts';
 import NewPost from './NewPost/NewPost';
@@ -12,9 +12,9 @@ class Blog extends Component {
         <header>
           <nav>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/posts">Posts</Link></li>
-              <li><Link to="/new-post">New Post</Link></li>
+              <li><NavLink exact to="/">Home</NavLink></li>
+              <li><NavLink to="/posts">Posts</NavLink></li>
+              <li><NavLink to="/new-post">New Post</NavLink></li>
             </ul>
           </nav>
         </header>
