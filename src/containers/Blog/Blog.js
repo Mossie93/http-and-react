@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
+import { Route, NavLink, Switch } from 'react-router-dom';
 
 import Posts from './Posts/Posts';
 import NewPost from './NewPost/NewPost';
@@ -22,9 +22,9 @@ class Blog extends Component {
           </nav>
         </header>
         <Switch>
-          <Route path="/posts" component={Posts}/>
           {this.state.auth ? <Route path="/new-post" component={NewPost}/> : null}
-          <Redirect from="/" to="/posts"/>
+          <Route path="/posts" component={Posts}/>
+          <Route render={()=><h1>404, not found!</h1>}/>
         </Switch>
       </div>
     );
